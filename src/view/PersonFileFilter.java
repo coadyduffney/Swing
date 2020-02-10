@@ -1,4 +1,4 @@
-package swing2;
+package view;
 
 import java.io.File;
 import javax.swing.filechooser.FileFilter;

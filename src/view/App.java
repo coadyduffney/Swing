@@ -1,4 +1,4 @@
-package swing2;
+package view;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;

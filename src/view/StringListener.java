@@ -1,5 +1,5 @@
 
-package swing2;
+package view;
 
 /**
  *
