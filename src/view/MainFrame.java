@@ -1,5 +1,6 @@
 package view;
 
+import controller.Controller;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -23,6 +24,7 @@ public class MainFrame extends JFrame {
     private Toolbar toolbar;
     private FormPanel formPanel;
     private JFileChooser fileChooser;
+    private Controller controller;
 
     public MainFrame() {
         super("Java SWING (GUI) Programming");
@@ -32,6 +34,8 @@ public class MainFrame extends JFrame {
         toolbar = new Toolbar();
         textPanel = new TextPanel();
         formPanel = new FormPanel();
+        
+        controller = new Controller();
         
         fileChooser = new JFileChooser();
         fileChooser.addChoosableFileFilter(new PersonFileFilter());
@@ -48,20 +52,21 @@ public class MainFrame extends JFrame {
         formPanel.setFormListener(new FormListener() {
             @Override
             public void onFormEvent(FormEvent ev) {
-                String name = ev.getName();
-                String occupation = ev.getOccupation();
-                int ageCat = ev.getAgeCategory();
-                String empCat = ev.getEmploymentCategory();
-                String gender = ev.getGender();
+//                String name = ev.getName();
+//                String occupation = ev.getOccupation();
+//                int ageCat = ev.getAgeCategory();
+//                String empCat = ev.getEmploymentCategory();
+//                String gender = ev.getGender();
+//
+////                    textPanel.appendText(name + ", " + occupation + ", " + ageCat + ", " + empCat + "\n");
+//                textPanel.appendText("Name: " + name + "\n");
+//                textPanel.appendText("Occupation: " + occupation + "\n");
+//                textPanel.appendText("Age Category: " + ageCat + "\n");
+//                textPanel.appendText("Employment Status: " + empCat + "\n");
+//                textPanel.appendText("Gender: " + gender + "\n");
+//                textPanel.appendText("-----------------------------------------------\n");
 
-//                    textPanel.appendText(name + ", " + occupation + ", " + ageCat + ", " + empCat + "\n");
-                textPanel.appendText("Name: " + name + "\n");
-                textPanel.appendText("Occupation: " + occupation + "\n");
-                textPanel.appendText("Age Category: " + ageCat + "\n");
-                textPanel.appendText("Employment Status: " + empCat + "\n");
-                textPanel.appendText("Gender: " + gender + "\n");
-                textPanel.appendText("-----------------------------------------------\n");
-
+                controller.addPerson(ev);
             }
         });
 
