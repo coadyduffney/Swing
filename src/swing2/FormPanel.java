@@ -6,6 +6,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
@@ -52,12 +53,18 @@ public class FormPanel extends JPanel {
         occupationLabel = new JLabel("Occupation: ");
         nameField = new JTextField(10);
         occupationField = new JTextField(10);
-        okBtn = new JButton("OK");
         ageList = new JList();
         empCombo = new JComboBox();
         citizenCheck = new JCheckBox();
         taxField = new JTextField(10);
         taxLabel = new JLabel("Tax ID: ");
+        okBtn = new JButton("OK");
+        
+        // Set up mneumonics
+        okBtn.setMnemonic(KeyEvent.VK_ENTER);
+        
+        nameLabel.setDisplayedMnemonic(KeyEvent.VK_N);
+        nameLabel.setLabelFor(nameField);
         
         maleRadio = new JRadioButton("Male");
         maleRadio.setActionCommand("Male");
