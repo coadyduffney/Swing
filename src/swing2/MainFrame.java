@@ -1,6 +1,7 @@
 package swing2;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import javax.swing.JCheckBoxMenuItem;
@@ -8,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 
 /**
@@ -65,6 +67,7 @@ public class MainFrame extends JFrame {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 500);
+        setMinimumSize(new Dimension(500, 400));
     }
 
     private JMenuBar createMenuBar() {
@@ -103,7 +106,11 @@ public class MainFrame extends JFrame {
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
         
         exitItem.addActionListener((e) -> {
-            System.exit(0);
+
+            int input = JOptionPane.showConfirmDialog(MainFrame.this, "Are you sure you want to exit the application?", "Exit Application?", JOptionPane.OK_CANCEL_OPTION);
+            if (input == JOptionPane.OK_OPTION) {
+                System.exit(0);
+            }
         });
 
         return menuBar;
