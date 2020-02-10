@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -21,6 +22,7 @@ public class MainFrame extends JFrame {
     private TextPanel textPanel;
     private Toolbar toolbar;
     private FormPanel formPanel;
+    private JFileChooser fileChooser;
 
     public MainFrame() {
         super("Java SWING (GUI) Programming");
@@ -30,6 +32,9 @@ public class MainFrame extends JFrame {
         toolbar = new Toolbar();
         textPanel = new TextPanel();
         formPanel = new FormPanel();
+        
+        fileChooser = new JFileChooser();
+        fileChooser.addChoosableFileFilter(new PersonFileFilter());
 
         setJMenuBar(createMenuBar());
 
@@ -104,6 +109,18 @@ public class MainFrame extends JFrame {
         exitItem.setMnemonic(KeyEvent.VK_X);
         
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
+        
+        importDataItem.addActionListener(e -> {
+           if (fileChooser.showOpenDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION) {
+               System.out.println(fileChooser.getSelectedFile());
+           }
+        });
+        
+        exportDataItem.addActionListener(e -> {
+           if (fileChooser.showSaveDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION) {
+               System.out.println(fileChooser.getSelectedFile());
+           }
+        });
         
         exitItem.addActionListener((e) -> {
 
