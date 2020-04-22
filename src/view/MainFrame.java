@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -108,13 +109,22 @@ public class MainFrame extends JFrame {
         
         importDataItem.addActionListener(e -> {
            if (fileChooser.showOpenDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION) {
-               System.out.println(fileChooser.getSelectedFile());
+               try {
+                   controller.loadFromFile(fileChooser.getSelectedFile());
+                   tablePanel.refresh();
+               } catch (IOException ex) {
+                   JOptionPane.showMessageDialog(MainFrame.this, "Failed to load data from file.", "Error", JOptionPane.ERROR_MESSAGE);
+               }
            }
         });
         
         exportDataItem.addActionListener(e -> {
            if (fileChooser.showSaveDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION) {
-               System.out.println(fileChooser.getSelectedFile());
+               try {
+                   controller.saveToFile(fileChooser.getSelectedFile());
+               } catch (IOException ex) {
+                   JOptionPane.showMessageDialog(MainFrame.this, "Failed to save data to file.", "Error", JOptionPane.ERROR_MESSAGE);
+               }
            }
         });
         
