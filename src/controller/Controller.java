@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.List;
 import model.AgeCategory;
 import model.Database;
 import model.EmploymentCategory;
@@ -13,6 +14,11 @@ import view.FormEvent;
  */
 public class Controller {
     Database db = new Database();
+    
+    public List<Person> getPeople() {
+        return db.getPeople();
+    }
+    
     
     public void addPerson(FormEvent ev) {
         String name = ev.getName();
