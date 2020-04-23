@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -39,11 +40,20 @@ public class TablePanel extends JPanel {
         table.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
+                
+                int row = table.rowAtPoint(e.getPoint());
+                
+                table.getSelectionModel().setSelectionInterval(row, row);
+                
                 if (e.getButton() == MouseEvent.BUTTON3) {
                     popup.show(table, e.getX(), e.getY());
                 }
             }
             
+        });
+        
+        removeItem.addActionListener((ActionEvent e) -> {
+            int row = table.getSelectedRow();
         });
         
         setLayout(new BorderLayout());
