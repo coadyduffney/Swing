@@ -13,6 +13,9 @@ public class PrefsDialog extends JDialog {
     private JButton cancelButton;
     private JSpinner portSpinner;
     private SpinnerNumberModel spinnerModel;
+    private JTextField userField;
+    private JPasswordField passField;
+
 
     public PrefsDialog(JFrame parentFrame) {
         super(parentFrame, "Preferences", false);
@@ -23,11 +26,45 @@ public class PrefsDialog extends JDialog {
         spinnerModel = new SpinnerNumberModel(3306, 0, 9999, 1);
         portSpinner = new JSpinner(spinnerModel);
 
+        userField = new JTextField(10);
+        passField = new JPasswordField(10);
+        passField.setEchoChar('*');
+
         setLayout(new GridBagLayout());
 
         GridBagConstraints gc = new GridBagConstraints();
 
         gc.gridy = 0;
+
+        // -- FIRST ROW
+        gc.weightx = 1;
+        gc.weighty = 1;
+        gc.fill = GridBagConstraints.NONE;
+
+        gc.gridx = 0;
+
+        add(new JLabel("User: "), gc);
+
+        gc.gridx++;
+        add(userField, gc);
+
+        // -- NEXT ROW
+        gc.gridy++;
+
+        gc.weightx = 1;
+        gc.weighty = 1;
+        gc.fill = GridBagConstraints.NONE;
+
+        gc.gridx = 0;
+
+        add(new JLabel("Password: "), gc);
+
+        gc.gridx++;
+        add(passField, gc);
+
+        // -- NEXT ROW
+        gc.gridy++;
+
         gc.weightx = 1;
         gc.weighty = 1;
         gc.fill = GridBagConstraints.NONE;
@@ -48,8 +85,12 @@ public class PrefsDialog extends JDialog {
         add(cancelButton, gc);
 
         okButton.addActionListener((e) -> {
-            Integer value = (Integer) portSpinner.getValue();
-            System.out.println("value=" + value);
+            Integer portValue = (Integer) portSpinner.getValue();
+            String user = userField.getText();
+            char[] password = passField.getPassword();
+
+            System.out.println(user + new String(password));
+
             dispose();
         });
 
