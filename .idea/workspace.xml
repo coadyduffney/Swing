@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c674b325-3e9a-4339-958a-b586485112da" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/libraries/jars.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Swing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Swing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -10,12 +11,19 @@
       <change beforePath="$PROJECT_DIR$/build/classes/view/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/view/MainFrame$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/view/MainFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/view/PrefsDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/view/PrefsDialog.class" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 9c8a4e137857e556aac839d0d5628cfe5ddc8905
       <change beforePath="$PROJECT_DIR$/out/production/Swing/view/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/view/MainFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/view/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/view/MainFrame$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/view/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/view/MainFrame$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/view/MainFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/view/PrefsDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/view/PrefsDialog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/view/PrefsDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/PrefsDialog.java" afterDir="false" />
+>>>>>>> 9c8a4e137857e556aac839d0d5628cfe5ddc8905
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +36,7 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Swing" />
+<<<<<<< HEAD
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -89,16 +98,31 @@
       <find>add person</find>
       <find>okButton.add</find>
     </findStrings>
+=======
+>>>>>>> 9c8a4e137857e556aac839d0d5628cfe5ddc8905
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/view/TextPanel.java" />
         <option value="$PROJECT_DIR$/src/view/PrefsDialog.java" />
         <option value="$PROJECT_DIR$/src/view/MainFrame.java" />
+=======
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/Swing.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/Swing.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+>>>>>>> 9c8a4e137857e556aac839d0d5628cfe5ddc8905
       </list>
     </option>
   </component>
@@ -108,6 +132,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -147,6 +172,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jars" />
     <property name="project.structure.last.edited" value="Modules" />
+=======
+  <component name="ProjectId" id="1caYl6HReOOvHvUhpSygK4u7jjZ" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+>>>>>>> 9c8a4e137857e556aac839d0d5628cfe5ddc8905
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -185,6 +219,7 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
@@ -285,6 +320,18 @@
         </state>
       </provider>
     </entry>
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> 9c8a4e137857e556aac839d0d5628cfe5ddc8905
   </component>
   <component name="masterDetails">
     <states>
