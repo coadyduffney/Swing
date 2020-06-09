@@ -1,5 +1,8 @@
 package view;
 
+import com.bulenkov.darcula.DarculaLaf;
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import controller.Controller;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -7,14 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.prefs.Preferences;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
+import javax.swing.*;
+import javax.swing.plaf.basic.BasicLookAndFeel;
 
 /**
  *
@@ -33,6 +30,8 @@ public class MainFrame extends JFrame {
 
     public MainFrame() {
         super("Java SWING (GUI) Programming");
+
+        FlatLightLaf.install();
 
         setLayout(new BorderLayout());
 
